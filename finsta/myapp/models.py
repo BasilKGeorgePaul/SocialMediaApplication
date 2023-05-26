@@ -30,7 +30,7 @@ class Posts(models.Model):
 
 class Comment(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE,related_name="comment")
-    Comment_text=models.CharField(max_length=200)
+    comment_text=models.CharField(max_length=200)
     post=models.ForeignKey(Posts,on_delete=models.CASCADE,related_name="post_comment")
     created_date=models.DateTimeField(auto_now_add=True)
 
